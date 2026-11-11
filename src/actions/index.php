@@ -1,0 +1,58 @@
+<?php
+require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
+$APPLICATION->SetTitle("Акции");
+?>
+<?$APPLICATION->IncludeComponent(
+	"bitrix:news",
+	"actions",
+	[
+		"IBLOCK_TYPE" => "content",
+		"IBLOCK_ID" => "5",
+		"NEWS_COUNT" => "20",
+		"SORT_BY1" => "ACTIVE_FROM",
+		"SORT_ORDER1" => "DESC",
+		"SORT_BY2" => "SORT",
+		"SORT_ORDER2" => "ASC",
+		"CHECK_DATES" => "Y",
+		"USE_FILTER" => "N",
+		"USE_RSS" => "N",
+		"USE_SEARCH" => "N",
+		"USE_RATING" => "N",
+		"USE_CATEGORIES" => "N",
+		"USE_REVIEW" => "N",
+		"USE_SHARE" => "N",
+		"SET_STATUS_404" => "Y",
+		"SHOW_404" => "Y",
+		"MESSAGE_404" => "",
+		"FILE_404" => "",
+		"SET_TITLE" => "Y",
+		"ADD_SECTIONS_CHAIN" => "N",
+		"ADD_ELEMENT_CHAIN" => "Y",
+		"LIST_FIELD_CODE" => ["ACTIVE_TO"],
+		"LIST_PROPERTY_CODE" => ["DISCOUNT"],
+		"LIST_ACTIVE_DATE_FORMAT" => "d.m.Y",
+		"DETAIL_FIELD_CODE" => ["ACTIVE_TO"],
+		"DETAIL_PROPERTY_CODE" => ["DISCOUNT"],
+		"DETAIL_ACTIVE_DATE_FORMAT" => "d.m.Y",
+		"DISPLAY_DATE" => "Y",
+		"DISPLAY_NAME" => "Y",
+		"DISPLAY_PICTURE" => "Y",
+		"DISPLAY_PREVIEW_TEXT" => "Y",
+		"DISPLAY_TOP_PAGER" => "N",
+		"DISPLAY_BOTTOM_PAGER" => "Y",
+		"PAGER_TEMPLATE" => ".default",
+		"CACHE_TYPE" => "A",
+		"CACHE_TIME" => "600",
+		"CACHE_FILTER" => "N",
+		"CACHE_GROUPS" => "Y",
+		"SEF_MODE" => "Y",
+		"SEF_FOLDER" => "/actions/",
+		"SEF_URL_TEMPLATES" => [
+			"news" => "",
+			"section" => "",
+			"detail" => "#ELEMENT_CODE#/",
+		],
+	],
+	false
+);?>
+<?require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/footer.php");?>

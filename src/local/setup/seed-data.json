@@ -1,0 +1,35 @@
+[
+  {
+    "code": "skidka-na-vse",
+    "name": "Скидка 20% на всю мебель",
+    "preview_text": "Весенняя распродажа: скидка 20% на всю мебель из каталога.",
+    "detail_text": "Только в период акции действует скидка 20% на весь ассортимент мебели. Скидка не суммируется с другими предложениями. Уникальная метка проверки: SEED-SKIDKA-DETAIL-7F3A.",
+    "discount": "-20%",
+    "days_from": -1,
+    "days_to": 30,
+    "preview_image": "seed-images/action-1.jpg",
+    "detail_image": "seed-images/action-1.jpg"
+  },
+  {
+    "code": "dva-po-cene-odnogo",
+    "name": "Два стула по цене одного",
+    "preview_text": "Покупайте два стула из серии «Комфорт» и платите только за один.",
+    "detail_text": "При покупке двух стульев из серии «Комфорт» стоимость второго стула равна нулю. Предложение действует на склад и под заказ. Уникальная метка проверки: SEED-DVA-DETAIL-2B9C.",
+    "discount": "2 по цене 1",
+    "days_from": -2,
+    "days_to": 25,
+    "preview_image": "seed-images/action-2.jpg",
+    "detail_image": "seed-images/action-2.jpg"
+  },
+  {
+    "code": "besplatnaya-dostavka",
+    "name": "Бесплатная доставка по городу",
+    "preview_text": "Доставим заказ от 30 000 рублей бесплатно в пределах города.",
+    "detail_text": "Бесплатная доставка действует для заказов от 30 000 рублей в пределах города. Подъём на этаж оплачивается отдельно. Уникальная метка проверки: SEED-DOSTAVKA-DETAIL-9D41.",
+    "discount": "Бесплатная доставка",
+    "days_from": -3,
+    "days_to": 20,
+    "preview_image": "seed-images/action-3.jpg",
+    "detail_image": "seed-images/action-3.jpg"
+  }
+]

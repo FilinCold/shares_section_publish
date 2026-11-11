@@ -1,0 +1,25 @@
+bitrix.147-45-244-124.sslip.io {
+	root * /var/www/bitrix
+	encode gzip
+
+	# служебные пути: наружу не отдаём
+	@denied {
+		path_regexp denied (?i)^/(local/setup|bitrix/(modules|php_interface|backup|managed_cache|stack_cache)|\.git)|^/bitrix/\.settings[^/]*\.php$|^/upload/.*\.php$|\.log$
+	}
+	@cache {
+		path_regexp cachedir (?i)^/bitrix/cache/
+		not path_regexp cachestatic (?i)^/bitrix/cache/(css|js)/
+	}
+	handle @denied {
+		respond 404
+	}
+	handle @cache {
+		respond 404
+	}
+
+	handle {
+		try_files {path} {path}/index.php /bitrix/urlrewrite.php
+		php_fastcgi 127.0.0.1:9000
+		file_server
+	}
+}
